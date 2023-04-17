@@ -6,7 +6,7 @@
   "version": "0.0.0",
   "scripts": {
     "analyze": "cem analyze --litelement",
-    "start": "web-dev-server --watch"
+    "start": "web-dev-server --watch --node-resolve"
   },
   "dependencies": {
     "external-lib": "file:../external-lib",

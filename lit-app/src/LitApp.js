@@ -1,5 +1,4 @@
 import { LitElement, html, css } from 'lit';
-import { repeat } from "lit/directives/repeat.js";
 
 const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
@@ -59,7 +58,6 @@ export class LitApp extends LitElement {
         super();
         this.title = 'My app';
 
-        this.numbers = [1, 2, 3, 4, 5, 6]
     }
 
     render() {
@@ -67,8 +65,6 @@ export class LitApp extends LitElement {
       <main>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.title}</h1>
-
-        ${repeat(this.numbers, num => html`<p>${num}</p>`)}
 
         <p>Edit <code>src/LitApp.js</code> and save to reload.</p>
         <a
