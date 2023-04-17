@@ -1,16 +1,17 @@
 import { LitElement, html, css } from 'lit';
+import { repeat } from "lit/directives/repeat.js";
 
 const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
 export class LitApp extends LitElement {
-  static get properties() {
-    return {
-      title: { type: String },
-    };
-  }
+    static get properties() {
+        return {
+            title: { type: String },
+        };
+    }
 
-  static get styles() {
-    return css`
+    static get styles() {
+        return css`
       :host {
         min-height: 100vh;
         display: flex;
@@ -52,18 +53,22 @@ export class LitApp extends LitElement {
         margin-left: 5px;
       }
     `;
-  }
+    }
 
-  constructor() {
-    super();
-    this.title = 'My app';
-  }
+    constructor() {
+        super();
+        this.title = 'My app';
 
-  render() {
-    return html`
+        this.numbers = [1, 2, 3, 4, 5, 6]
+    }
+
+    render() {
+        return html`
       <main>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.title}</h1>
+
+        ${repeat(this.numbers, num => html`<p>${num}</p>`)}
 
         <p>Edit <code>src/LitApp.js</code> and save to reload.</p>
         <a
@@ -86,5 +91,5 @@ export class LitApp extends LitElement {
         >.
       </p>
     `;
-  }
+    }
 }

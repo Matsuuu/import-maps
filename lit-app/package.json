@@ -6,7 +6,7 @@
   "version": "0.0.0",
   "scripts": {
     "analyze": "cem analyze --litelement",
-    "start": "web-dev-server"
+    "start": "web-dev-server --watch"
   },
   "dependencies": {
     "lit": "^2.0.2"
