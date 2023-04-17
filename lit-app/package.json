@@ -9,6 +9,7 @@
     "start": "web-dev-server --watch"
   },
   "dependencies": {
+    "external-lib": "file:../external-lib",
     "lit": "^2.0.2"
   },
   "devDependencies": {
