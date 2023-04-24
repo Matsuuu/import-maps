@@ -1,0 +1,1 @@
+import LitAppStyles from "./lit-app-styles.css" assert { type: "css" };
