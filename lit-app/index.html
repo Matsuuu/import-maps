@@ -18,10 +18,20 @@
       }
     </style>
     <title>lit-app</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "lit": "https://esm.run/lit",
+                "lit/": "https://esm.run/lit/"
+            }
+        } 
+    </script>
+
   </head>
 
   <body>
-    <lit-app></lit-app>
+    <lit-app title="Turku Frontend"></lit-app>
 
     <script type="module" src="./src/lit-app.js"></script>
   </body>
